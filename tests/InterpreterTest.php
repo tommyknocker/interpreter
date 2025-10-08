@@ -116,7 +116,7 @@ final class InterpreterTest extends TestCase
     public function testUnexpectedTokenThrows(): void
     {
         $this->expectException(RuntimeException::class);
-        $this->interpreter->parse('('); // нет имени функции
+        $this->interpreter->parse('('); // no function name
     }
 
     public function testUnknownFunctionThrows(): void
@@ -172,9 +172,9 @@ final class InterpreterTest extends TestCase
     {
         $code = '(map, (array, 1, 2), (array, "a"))';
         $ast = $this->interpreter->parse($code);
-        // Подавляем E_WARNING
+        // Supress E_WARNING
         $result = @$this->interpreter->evaluate($ast);
-        // array_combine вернёт false, если длины массивов не совпадают
+        // array_combine will return false if the array lengths do not match.
         $this->assertFalse($result);
     }
 
