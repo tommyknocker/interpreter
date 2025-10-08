@@ -211,3 +211,7 @@ echo $result . PHP_EOL;
 ```bash
 ./vendor/bin/phpunit --bootstrap vendor/autoload.php tests
 ```
+or
+```bash
+composer run-script test
+```
