@@ -25,5 +25,8 @@
     "psr-4": {
       "tommyknocker\\interpreter\\tests\\": "tests/"
     }
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit --bootstrap vendor/autoload.php tests"
   }
 }

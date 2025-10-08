@@ -33,7 +33,6 @@ or
 composer require tommyknocker/interpreter
 ```
 
-
 ## Usage Examples
 
 ```php
@@ -189,7 +188,7 @@ $result = $interpreter->evaluate($ast);
  * Result
  * {
  *      "message": "Hello, Alice",
- *      "status": "true"
+ *      "status": true
  * }
  */
 echo $result . PHP_EOL;
